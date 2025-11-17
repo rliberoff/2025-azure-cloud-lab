@@ -24,6 +24,8 @@ resource "azurerm_kubernetes_cluster" "aks" {
   kubernetes_version  = var.kubernetes_version
   node_resource_group = "${var.resource_group_name}-generated"
 
+  oidc_issuer_enabled = true
+
   linux_profile {
     admin_username = var.admin_username
 
