@@ -185,7 +185,7 @@ variable "aks_gpu_node_pool_vm_size" {
   description = "(Required) Specifies the Virtual Machine size (SKU) which should be used for the Virtual Machines used for the GPU Node Pool. It is very important to choose a VM from the families that provides GPUs, like the `NCs v3` Changing this forces a new resource to be created. Defaults to `Standard_NC6s_v3`."
   type        = string
   nullable    = false
-  default     = "Standard_NC24ads_A100_v4"
+  default     = "ter"
 }
 
 variable "aks_gpu_node_pool_node_count" {
