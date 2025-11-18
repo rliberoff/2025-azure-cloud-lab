@@ -50,7 +50,7 @@ variable "namespace" {
 }
 
 variable "model_name" {
-  description = "(Required) The name of the model that the Ollama service will use. More info: https://ollama.com/library"
-  type        = string
+  description = "(Required) The list of model names that the Ollama service will pull. More info: https://ollama.com/library"
+  type        = list(string)
   nullable    = false
 }

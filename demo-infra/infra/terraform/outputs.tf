@@ -1,6 +1,6 @@
 locals {
   ollama_fqdn = "http://${local.ollama_service_name}.${var.location}.cloudapp.azure.com:${var.ollama_port}"
-  next_steps  = "Please wait a few minutes for the models deployed into the Ollama service to be downloaded and initializated. Then, you can access the Ollama service, for example using `curl` like this: `curl ${local.ollama_fqdn}/api/generate -d '{ \"model\": \"${var.ollama_model_name}\", \"prompt\": \"Why is the sky blue?\", \"stream\": false }'."
+  next_steps  = "Please wait a few minutes for the models deployed into the Ollama service to be downloaded and initializated. Then, you can access the Ollama service, for example using `curl` like this: `curl ${local.ollama_fqdn}/api/generate -d '{ \"model\": \"${var.ollama_model_names[0]}\", \"prompt\": \"Why is the sky blue?\", \"stream\": false }'`."
 }
 
 output "ollama_fqdn" {

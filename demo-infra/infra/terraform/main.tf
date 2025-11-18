@@ -127,7 +127,7 @@ module "ollama" {
   resource_group_name         = azurerm_resource_group.rg.name
   network_security_group_name = module.network.nsg_name
   namespace                   = local.ollama_service_name
-  model_name                  = var.ollama_model_name
+  model_name                  = var.ollama_model_names
 
   depends_on = [module.nvidia]
 }

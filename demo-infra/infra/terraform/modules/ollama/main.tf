@@ -26,7 +26,7 @@ resource "helm_release" "ollama" {
       port           = var.port
       resource_group = var.resource_group_name
       ip_address     = var.public_ip_address
-      model          = var.model_name
+      models         = var.model_name
       dns_label_name = lower("${var.name}")
     })}"
   ]

@@ -7,8 +7,10 @@ ollama:
     type: 'nvidia'
     number: 1
   models:
-    pull:    
+    pull:
+%{ for model in models ~}
       - "${model}"
+%{ endfor ~}
 
 service:
     type: LoadBalancer

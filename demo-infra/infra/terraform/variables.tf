@@ -263,9 +263,9 @@ variable "ollama_chart_version" {
   default     = "1.34.0"
 }
 
-variable "ollama_model_name" {
-  description = "(Required) The name of the model that the Ollama service will use. Defaults to `phi3:mini`. More info: https://ollama.com/library"
-  type        = string
+variable "ollama_model_names" {
+  description = "(Required) The list of model names that the Ollama service will use. More info: https://ollama.com/library"
+  type        = list(string)
   nullable    = false
-  default     = "phi3:mini"
+  default     = ["phi4:latest", "mistral-nemo:latest", "llama3.3:latest"]
 }
