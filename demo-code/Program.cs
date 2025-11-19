@@ -92,7 +92,7 @@ namespace IAsExtraordinarias
         static AIAgent CreateAgent(Config config)
         {
             OllamaApiClient chatClient = new(new Uri(@"http://localhost:11434"), config.Model);
-            ////OllamaApiClient chatClient = new(new Uri(@"http://ollama-b591b.germanywestcentral.cloudapp.azure.com:11434"), config.Model);
+            //OllamaApiClient chatClient = new(new Uri(@"http://ollama-117bf.germanywestcentral.cloudapp.azure.com:11434"), config.Model);
 
             AIAgent agent = new ChatClientAgent(chatClient, instructions: config.Instructions, name: config.AgentName);
             
